@@ -13,6 +13,52 @@ struct ContentView: View {
 	// MARK: - properties
 	
 	@State private var showingInfoView: Bool = false
+	@State private var reels: Array = [0, 1, 4]
+	@State private var coins: Int = 100
+	@State private var highscore: Int = 0
+	@State private var betAmount: Int = 10
+	private let symbols = ["gfx-bell", "gfx-cherry", "gfx-coin", "gfx-grape", "gfx-seven", "gfx-strawberry"]
+	
+	
+	// MARK: - functions
+	
+	// spin the reels
+	
+	private func spinReels() {
+		reels = reels.map({ _ in
+			Int.random(in: 0...symbols.count - 1)
+		})
+	}
+	
+	// check the winning
+	
+	private func checkWinning() {
+		if reels[0] == reels[1] && reels[1] == reels[2] && reels[0] == reels[2] {
+			playerWins()
+			if coins > highscore {
+				newHighScore()
+			}
+			
+		} else {
+			playerLoses()
+		}
+	}
+	
+	private func playerWins() {
+		coins += betAmount * 10
+	}
+	
+	private func newHighScore() {
+		highscore = coins
+	}
+	
+	private func playerLoses() {
+		coins -= betAmount
+	}
+	
+	// game is over
+	
+	
 	
 	
 	// MARK: - body
@@ -51,7 +97,7 @@ struct ContentView: View {
 							.scoreLabelStyle()
 							.multilineTextAlignment(.trailing)
 						
-						Text("100")
+						Text("\(coins)")
 							.scoreNumberStyle()
 							.modifier(ScoreNumberModifier())
 						
@@ -61,7 +107,7 @@ struct ContentView: View {
 					Spacer()
 					
 					HStack {
-						Text("200")
+						Text("\(highscore)")
 							.scoreNumberStyle()
 							.modifier(ScoreNumberModifier())
 						
@@ -85,7 +131,7 @@ struct ContentView: View {
 					
 					ZStack {
 						ReelView()
-						Image("gfx-bell")
+						Image(symbols[reels[0]])
 							.resizable()
 							.modifier(ImageModifier())
 					} // ZStack
@@ -97,7 +143,7 @@ struct ContentView: View {
 						
 						ZStack {
 							ReelView()
-							Image("gfx-seven")
+							Image(symbols[reels[1]])
 								.resizable()
 								.modifier(ImageModifier())
 						} // ZStack
@@ -109,7 +155,7 @@ struct ContentView: View {
 						
 						ZStack {
 							ReelView()
-							Image("gfx-cherry")
+							Image(symbols[reels[2]])
 								.resizable()
 								.modifier(ImageModifier())
 						} // ZStack
@@ -120,7 +166,8 @@ struct ContentView: View {
 					// MARK: - spin button
 					
 					Button(action: {
-						print("Spin the reels")
+						spinReels()
+						checkWinning()
 					}) {
 						Image("gfx-spin")
 							.renderingMode(.original)
@@ -156,6 +203,7 @@ struct ContentView: View {
 							.opacity(0)
 							.modifier(CasinoChipsModifier())
 					} // HStack
+					
 					
 					// MARK: - bet 10
 					
