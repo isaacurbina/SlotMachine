@@ -12,7 +12,7 @@ struct ContentView: View {
 	
 	// MARK: - properties
 	
-	
+	@State private var showingInfoView: Bool = false
 	
 	
 	// MARK: - body
@@ -199,7 +199,7 @@ struct ContentView: View {
 			.overlay(
 				// info
 				Button(action: {
-					print("Info View")
+					showingInfoView = true
 				}) {
 					Image(systemName: "info.circle")
 				}
@@ -214,6 +214,9 @@ struct ContentView: View {
 			
 			
 		} // ZStack
+		.sheet(isPresented: $showingInfoView) {
+			InfoView()
+		}
 	}
 }
 
