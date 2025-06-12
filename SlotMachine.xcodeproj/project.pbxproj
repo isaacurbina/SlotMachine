@@ -6,8 +6,37 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A7E073142DFA712B005AA63D /* Slot Machine Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A7E0730D2DFA712A005AA63D /* Slot Machine Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7E073122DFA712B005AA63D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A72EBFA32DEE45C400D07E3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7E0730C2DFA712A005AA63D;
+			remoteInfo = "Slot Machine Stickers";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A7E073152DFA712B005AA63D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A7E073142DFA712B005AA63D /* Slot Machine Stickers.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A72EBFAB2DEE45C400D07E3A /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E0730D2DFA712A005AA63D /* Slot Machine Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Slot Machine Stickers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -18,6 +47,13 @@
 			);
 			target = A72EBFAA2DEE45C400D07E3A /* SlotMachine */;
 		};
+		A7E073192DFA712B005AA63D /* Exceptions for "Slot Machine Stickers" folder in "Slot Machine Stickers" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A7E0730C2DFA712A005AA63D /* Slot Machine Stickers */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -27,6 +63,14 @@
 				A7E072DF2DFA685B005AA63D /* Exceptions for "SlotMachine" folder in "SlotMachine" target */,
 			);
 			path = SlotMachine;
+			sourceTree = "<group>";
+		};
+		A7E0730E2DFA712A005AA63D /* Slot Machine Stickers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A7E073192DFA712B005AA63D /* Exceptions for "Slot Machine Stickers" folder in "Slot Machine Stickers" target */,
+			);
+			path = "Slot Machine Stickers";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -46,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A72EBFAD2DEE45C400D07E3A /* SlotMachine */,
+				A7E0730E2DFA712A005AA63D /* Slot Machine Stickers */,
 				A72EBFAC2DEE45C400D07E3A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A72EBFAB2DEE45C400D07E3A /* SlotMachine.app */,
+				A7E0730D2DFA712A005AA63D /* Slot Machine Stickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,10 +114,12 @@
 				A72EBFA72DEE45C400D07E3A /* Sources */,
 				A72EBFA82DEE45C400D07E3A /* Frameworks */,
 				A72EBFA92DEE45C400D07E3A /* Resources */,
+				A7E073152DFA712B005AA63D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A7E073132DFA712B005AA63D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A72EBFAD2DEE45C400D07E3A /* SlotMachine */,
@@ -82,6 +130,26 @@
 			productName = SlotMachine;
 			productReference = A72EBFAB2DEE45C400D07E3A /* SlotMachine.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A7E0730C2DFA712A005AA63D /* Slot Machine Stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7E073182DFA712B005AA63D /* Build configuration list for PBXNativeTarget "Slot Machine Stickers" */;
+			buildPhases = (
+				A7E0730B2DFA712A005AA63D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A7E0730E2DFA712A005AA63D /* Slot Machine Stickers */,
+			);
+			name = "Slot Machine Stickers";
+			packageProductDependencies = (
+			);
+			productName = "Slot Machine Stickers";
+			productReference = A7E0730D2DFA712A005AA63D /* Slot Machine Stickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +162,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					A72EBFAA2DEE45C400D07E3A = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					A7E0730C2DFA712A005AA63D = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -113,12 +184,20 @@
 			projectRoot = "";
 			targets = (
 				A72EBFAA2DEE45C400D07E3A /* SlotMachine */,
+				A7E0730C2DFA712A005AA63D /* Slot Machine Stickers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A72EBFA92DEE45C400D07E3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E0730B2DFA712A005AA63D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,6 +215,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7E073132DFA712B005AA63D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7E0730C2DFA712A005AA63D /* Slot Machine Stickers */;
+			targetProxy = A7E073122DFA712B005AA63D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A72EBFB42DEE45C500D07E3A /* Debug */ = {
@@ -317,6 +404,46 @@
 			};
 			name = Release;
 		};
+		A7E073162DFA712B005AA63D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DP88U2RPU8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Slot Machine Stickers/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Slot Machine";
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iucoding.SlotMachine.Slot-Machine-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7E073172DFA712B005AA63D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DP88U2RPU8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Slot Machine Stickers/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Slot Machine";
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iucoding.SlotMachine.Slot-Machine-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +461,15 @@
 			buildConfigurations = (
 				A72EBFB72DEE45C500D07E3A /* Debug */,
 				A72EBFB82DEE45C500D07E3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7E073182DFA712B005AA63D /* Build configuration list for PBXNativeTarget "Slot Machine Stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E073162DFA712B005AA63D /* Debug */,
+				A7E073172DFA712B005AA63D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
